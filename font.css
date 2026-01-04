@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "inter";
+    src: url(/fonts/Inter-VariableFont_opsz\,wght.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "manrope";
+    font-weight: bold;
+    src: url(/fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+}

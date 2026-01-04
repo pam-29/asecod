@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/menu.css">
+    <link rel="stylesheet" href="/font.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="/menu.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="flex justify-between items-center py-4 px-20 lg:sticky">
+        <div>
+            <a href="">
+                <img src="/images/logo.png" alt="logo de l'entreprise" class="hover:opacity-50 cursor-pointor">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu hidden flex flex-col justify-center absolute bg-white w-full left-0 top-0 h-screen items-center transition-all ease-in duration-500 lg:h-auto lg:flex lg:flex-row lg:z-auto lg:static">   
+                <li class="my-4 lg:my-0 lg:mx-4"> <a href="/">Accueil</a> </li>
+                <li class="my-4 lg:my-0 lg:mx-4"> <a href="/pages/programme.html">Programmes R&D</a> </li>
+                <li class="my-4 lg:my-0 lg:mx-4"> <a href="/pages/about.html">A propos</a> </li>
+                <li class="my-4 lg:my-0 lg:mx-4"> <a href="/pages/etude.html">Etude de cas</a> </li>
+                <li class="my-4 lg:my-0 lg:mx-4"> <a href="#contact" id="link-contact">Contact</a> </li>
+            </ul>
+        </nav>
+
+        <img src="/images/hamburger-menu.svg" alt="hamburger menu" class="lg:hidden z-[1]" id="hamburger-menu" >
+
+        <img src="/images/close.svg" alt="bouton fermer le menu" class="lg:hidden hidden z-[1]" id="close" >
+    </header>
+</body>
+</html>
