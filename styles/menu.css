@@ -11,13 +11,15 @@ a{
     font-family: 'inter', sans-serif;
 }
 
-@media screen and (max-width:600px) {
-    header{
-        padding: 20px 20px;
-    }
-
+@media screen and (max-width:1000px) {
     .menu a:hover,
     .menu a.active{
         text-decoration: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    header{
+        padding: 20px 20px;
     }
 }

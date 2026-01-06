@@ -11,19 +11,17 @@
     <script src="menu.js" defer></script>
     <title>Asecod</title>
 </head>
-<body class="h-screen flex flex-col">
+<body class="h-screen flex flex-col ">
     <div id="header"></div>
 
     <main class="flex-grow">
-        <section class="bg-[#117B96] flex justify-between items-center ">
-            <div class="w-96 text-white lg:w-1/2">
-                <h1>Bilan carbone</h1>
-                <h2>Transition écologique</h2>
-                <p class="mt-8">ASECOD est un bureau d'études spécialisé dans la réalisation de bilans carbone et l'accompagnement des organisations dans leur transition énergétique.
-                Notre expertise repose sur une approche systémique rigoureuse et une volonté de rendre la transition écologique accessible.</p>
+        <section class="relative bg-[url('/images/photo-presentation.png')] bg-no-repeat bg-cover ">
+            <div class="absolute inset-0 bg-black/50 z-0"></div>
+            <div class="relative text-white w-80 md:w-96 lg:w-1/2 z-10 ">
+                <h1 class="font-bold">Mesurer, comprendre et réduire votre empreinte carbone</h1>
+                <p class="mt-8">Plus qu’un diagnostic, ASECOD transforme votre donnée carbone en levier de performance. 
+                Grâce à notre approche systémique, nous accompagnons les organisations pour intégrer la transition énergétique au cœur de leur stratégie durable.</p>
             </div>
-
-            <img src="/images/water.png" alt="image décorative de l'eau" class="hidden md:block size-64 lg:size-96">
         </section>
 
         <section>
@@ -45,25 +43,32 @@
             </div>         
         </section>
 
-        <section>
-            <h2 class="title">A propos</h2>
+        <section class="adn-section bg-[#117B96] text-white md:text-center flex flex-col md:items-center">
+            <h2 class="title">Notre ADN</h2>
+            <p class="w-full md:w-2/3">L’essence d'ASECOD est inscrite dans son nom : Approche Systémique en Économie Circulaire et Organisation Durable. Plus qu'un bureau d'études, nous sommes votre partenaire stratégique pour transformer les enjeux climatiques en opportunités de performance.</p>
+        </section>
 
-            <div class="about">
-                <div class="lg:w-1/2 lg:mt-10">
+        <section>
+            <h2 class="title">La méthode ASECOD</h2>
+            <p>Notre expertise repose sur trois piliers fondamentaux qui guident chacune de nos interventions.</p>
+            
+            <div class="flex flex-col lg:flex-row method gap-4 justify-center mt-24">
+                <div class=" md:w-2/3 lg:w-96">
+                    <img src="/images/approche.svg" alt="" >
                     <h3>Approche Systémique</h3>
-                    <p>Approche Systémique : Nous analysons les interactions de votre écosystème pour trouver les leviers les plus efficaces.</p>
+                    <p>Nous ne nous contentons pas de chiffres isolés; nous analysons les interactions de l’ensemble de votre écosystème pour trouver les leviers les plus efficaces.</p>
                 </div>
-                <div class="lg:w-1/2 lg:justify-self-end">
-                    <h3>Économie Circulaire</h3>
-                    <p>Nous transformons les contraintes en ressources pour construire des modèles résilients.</p>
+
+                <div class=" md:w-2/3 lg:w-96">
+                    <img src="/images/economie.svg" alt=""">
+                    <h3>Economie Circulaire</h3>
+                    <p>Nous transformons les contraintes environnementales en ressources pour construire des modèles résilients.</p>
                 </div>
-                <div class="lg:w-1/2">
+
+                <div class=" md:w-2/3 lg:w-96">
+                    <img src="/images/organisation.svg" alt="" >
                     <h3>Organisation Durable</h3>
                     <p>Nous intégrons la performance carbone au cœur de votre stratégie pour bâtir une organisation plus résiliente, plus efficace et prête pour les défis de demain.</p>
-                </div>
-                <div class="lg:w-1/2 lg:justify-self-end">
-                    <h3>Notre vision</h3>
-                    <p>Faire de la donnée carbone un langage universel, pour transformer la conscience écologique en action pilotée.</p>
                 </div>
             </div>
         </section>

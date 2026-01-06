@@ -12,13 +12,13 @@
 <body>
     <header class="flex justify-between items-center py-4 px-20 lg:sticky">
         <div>
-            <a href="">
+            <a href="/">
                 <img src="/images/logo.png" alt="logo de l'entreprise" class="hover:opacity-50 cursor-pointor">
             </a>
         </div>
 
         <nav>
-            <ul class="menu hidden flex flex-col justify-center absolute bg-white w-full left-0 top-0 h-screen items-center transition-all ease-in duration-500 lg:h-auto lg:flex lg:flex-row lg:z-auto lg:static">   
+            <ul class="menu hidden flex flex-col justify-center absolute bg-white w-full left-0 top-0 h-screen items-center transition-all ease-in duration-500 lg:h-auto lg:flex lg:flex-row lg:z-auto lg:static z-999">   
                 <li class="my-4 lg:my-0 lg:mx-4"> <a href="/">Accueil</a> </li>
                 <li class="my-4 lg:my-0 lg:mx-4"> <a href="/pages/programme.html">Programmes R&D</a> </li>
                 <li class="my-4 lg:my-0 lg:mx-4"> <a href="/pages/about.html">A propos</a> </li>
@@ -29,7 +29,7 @@
 
         <img src="/images/hamburger-menu.svg" alt="hamburger menu" class="lg:hidden z-[1]" id="hamburger-menu" >
 
-        <img src="/images/close.svg" alt="bouton fermer le menu" class="lg:hidden hidden z-[1]" id="close" >
+        <img src="/images/close.svg" alt="bouton fermer le menu" class="lg:hidden hidden z-[999]" id="close" >
     </header>
 </body>
 </html>
