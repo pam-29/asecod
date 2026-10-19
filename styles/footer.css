@@ -1,6 +1,93 @@
-@media screen and (max-width:600px) {
-    footer{
-        padding: 20px 20px;
+.title-footer{
+    font-size: 24px;
+    font-family: "manrope", sans-serif;
+    color: #f5f5f5;
+}
+
+footer a{
+    color: #f5f5f5;
+}
+
+a:hover{
+    opacity: 80%;
+}
+
+.footer-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mail{
+    width: 500px;
+}
+
+.mail a{
+    display: flex;
+    gap: 10px;
+}
+
+.list-link{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+}
+
+.list-link a{
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+.credit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+footer{
+    background-color: #117B96;
+    color: #f5f5f5;
+    padding: 50px 100px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width:1000px) {
+    .footer-section{
+        flex-direction: column;
+    }
+
+    .mail{
+        margin-bottom: 50px;
     }
 }
 
+@media screen and (max-width: 900px) {
+    footer{
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer{
+        padding: 20px;
+    }
+
+    .title-footer{
+        font-size: 20px;
+    }
+
+    .mail{
+        width: auto;
+    }
+
+    .list-link{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer{
+        padding: 10px;
+    }
+}

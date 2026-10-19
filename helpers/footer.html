@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Asecod</title>
     <link rel="stylesheet" href="/styles/footer.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <footer class="bg-[#117B96] text-white lg:mt-24 pt-8 px-24" id="contact">
-        <div class="flex justify-between lg:items-center">
-            <div class="w-80 lg:w-96">
+    <footer id="contact">
+        
+        <div class="footer-section">
+            <div class="mail">
                 <h2 class="title-footer">Nous contacter</h2>
                 <p>Envoyez-nous un message, nous serons ravi de vous répondre et d'échanger avec vous quelque soit le sujet.</p>
 
-                <a href="mailto:contact@asecod.fr" class="flex items-center underline gap-4 mt-8 hover:opacity-50">
+                <a href="mailto:contact@asecod.fr">
                     <img src="/images/mail.svg" alt="icône de mail">
                     <p>contact@asecod.fr</p>
                 </a>
-                
             </div>
 
             <div>
-                <img src="/images/logo-footer.png" alt="logo de l'entreprise" class="hidden md:block">
+                <p style="text-transform: uppercase; font-weight: bold;">Explorer</p>
+                <div class="list-link">
+                    <a href="">Nos prestations</a>
+                    <a href="">Déroulement d'une mission</a>
+                    <a href="">Notre méthode</a>
+                    <a href="">Ressources</a>
+                    <a href="">Questions fréquentes</a>
+                    <a href="">Demander un diagnostic</a>
+                </div>
             </div>
         </div>
 
-        <a href="/helpers/mention.html" target="_blank" class="block text-center mt-12 underline underline-offset-2 hover:opacity-50">Mentions légales</a>
-        <p class="mt-4 text-center text-xs pb-4">©2026 ASECOD - Tous droits réservés</p>
+        <div class="credit">
+            <a href="/helpers/mention.html" target="_blank">Mentions légales</a>
+            <p>©2026 ASECOD - Tous droits réservés</p>
+        </div>
     </footer>
 </body>
 </html>

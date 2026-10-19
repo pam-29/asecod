@@ -1,83 +1,329 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ASECOD est un bureau d'études spécialisé en bilan carbone et transition énergétique en France">
-    <meta name="google-site-verification" content="lcwfcCxlzYXSp2u5VcS9BK5sJ0w7f3ibx_OPaEc-S-A" />
-    <meta name="robots" content="index, follow">
+    <title>Asecod</title>
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/font.css">
     <link rel="stylesheet" href="/styles/menu.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="icon" type="image/x-icon" href="/images/icon.ico">
     <script src="menu.js" defer></script>
+    <script src="faq.js" defer></script>
     <title>Asecod - Bilan carbone entreprise – Bureau d’études expert</title>
 </head>
-<body class="h-screen flex flex-col ">
-    <div id="header"></div>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.jpg" alt="logo asecod">
+            </a>
+        </div>
 
-    <main class="flex-grow">
-        <section class="relative bg-[url('/images/photo-presentation.png')] bg-no-repeat bg-cover ">
-            <div class="absolute inset-0 bg-black/50 z-0"></div>
-            <div class="relative text-white w-80 md:w-96 lg:w-1/2 z-10 ">
-                <h1 class="font-bold">Mesurer, comprendre et réduire votre empreinte carbone</h1>
-                <p class="mt-8">Plus qu’un diagnostic, ASECOD transforme votre donnée carbone en levier de performance. 
-                Grâce à notre approche systémique, nous accompagnons les organisations pour intégrer la transition énergétique au cœur de leur stratégie durable.</p>
+        <button id="menu-btn" class="menu-btn" aria-label="Ouvrir le menu">
+            <img src="/images/hamburger-menu.svg" alt="ouvrir le menu">
+        </button>
+    </header>
+        
+    <nav id="mobile-menu" class="mobile-menu">
+        <button id="close-btn" class="close-btn" aria-label="Fermer le menu">
+            <img src="/images/close.svg" alt="Fermer le menu">
+        </button>
+
+        <ul class="menu-list">
+            <li><a href="">Accueil</a></li>
+            <li class="has-dropdown">
+                <button class="dropdown-toggle" aria-expanded="false">
+                    Prestations <span class="arrow">▾</span>
+                </button>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="">
+                            <strong>Bilan carbone et bilan GES</strong>
+                            <span>Mesurer précisément vos émissions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <strong>Stratégie bas carbone</strong>
+                            <span>Construire une trajectoire réaliste</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <strong>Pilotage carbone et tableaux de bord</strong>
+                            <span>Suivre vos progrès dans la durée</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <strong>Économie circulaire et organisation durable</strong>
+                            <span>Faire évoluer votre modèle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#approche-section">Notre méthode</a></li>
+            <li><a href="#ressource">Ressources</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#adn-section">A propos</a></li>
+        </ul>
+
+        <div class="menu-footer">
+            <a href="#contact-section" class="btn-diagnostic">Demander un diagnostic</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- section présentation -->
+        <section  class="first-container">
+            <div class="text-presentation">
+                <p class="text">CONSEIL &#8226; CARBONE &#8226; TRANSFORMATION </p>
+                <h1>Transformez votre bilan carbone en plan d’action concret.</h1>
+                <p>Mesurez les émissions de votre organisation, identifiez vos priorités et construisez une stratégie de réduction adaptée à votre activité.</p>
+            </div>
+
+            <div class="btn-container">
+                <a href="#contact-section"> Demander un diagnostic</a>
+                <a href="#approche-section"> Découvrir notre méthode</a>
             </div>
         </section>
 
-        <section>
-            <h2 class="title">Notre approche</h2>
+        <!-- section enjeux -->
+        <section class="enjeu-section">
+            <h2>VOS ENJEUX</h2>
+            <h3>Les défis que vous rencontrez</h3>
+            <p style="color: #5A5A5A;">Transformer une ambition climatique en décisions concrètes commence par rendre vos données lisibles et actionnables.</p>
 
-            <div class="value flex flex-col gap-4 lg:grid grid-cols-3 lg:gap-40 lg:mt-10 ">
-                <div>
-                    <img src="/images/chart.svg" alt="">
-                    <p>Mesurer</p>
+            <div class="type-enjeu">
+                <div class="type-container">
+                    <img src="/images/chart.svg" alt="icône chart">
+                    <p style="font-weight: bold;">Vous ne savez pas d'où proviennent vos émissions</p>
+                    <p style="color:  #5A5A5A;">Vos données sont réparties entre les factures, les achats, la mobilité, l'énergie et différents services.</p>
                 </div>
-                <div>
-                    <img src="/images/bulb.svg" alt="">
-                    <p>Comprendre</p>
+                <div class="type-container">
+                    <img src="/images/bulb.svg" alt="icône ampoule">
+                    <p style="font-weight: bold;">Vous devez définir vos priorités</p>
+                    <p style="color: #5A5A5A;">Vous cherchez à identifier les leviers de réduction adaptés à votre activité et à vos moyens.</p>
                 </div>
-                <div>
-                    <img src="/images/arrow-down.svg" alt="">
-                    <p>Réduire</p>
-                </div>
-            </div>         
-        </section>
-
-        <section class="adn-section bg-[#117B96] text-white md:text-center flex flex-col md:items-center" id="about">
-            <h2 class="title">Notre ADN</h2>
-            <p class="w-full md:w-2/3">L’essence d'ASECOD est inscrite dans son nom : Approche Systémique en Économie Circulaire et Organisation Durable. Plus qu'un bureau d'études, nous sommes votre partenaire stratégique pour transformer les enjeux climatiques en opportunités de performance.</p>
-        </section>
-
-        <section>
-            <h2 class="title">La méthode ASECOD</h2>
-            <p>Notre expertise repose sur trois piliers fondamentaux qui guident chacune de nos interventions.</p>
-            
-            <div class="flex flex-col lg:flex-row method gap-4 justify-center mt-24">
-                <div class=" md:w-2/3 lg:w-96">
-                    <img src="/images/approche.svg" alt="approche systémique" >
-                    <h3>Approche Systémique</h3>
-                    <p>Nous ne nous contentons pas de chiffres isolés; nous analysons les interactions de l’ensemble de votre écosystème pour trouver les leviers les plus efficaces.</p>
-                </div>
-
-                <div class=" md:w-2/3 lg:w-96">
-                    <img src="/images/economie.svg" alt="économie circulaire">
-                    <h3>Economie Circulaire</h3>
-                    <p>Nous transformons les contraintes environnementales en ressources pour construire des modèles résilients.</p>
-                </div>
-
-                <div class=" md:w-2/3 lg:w-96">
-                    <img src="/images/organisation.svg" alt="organisation durable" >
-                    <h3>Organisation Durable</h3>
-                    <p>Nous intégrons la performance carbone au cœur de votre stratégie pour bâtir une organisation plus résiliente, plus efficace et prête pour les défis de demain.</p>
+                <div class="type-container">
+                    <img src="/images/arrow-down.svg" alt="icône chart">
+                    <p style="font-weight: bold;">Vous souhaitez suivre vos progres</p>
+                    <p style="color: #5A5A5A;">Vous avez besoin d'indicateurs pour vérifier les résultats des actions et informer les décideurs.</p>
                 </div>
             </div>
+
+            <div class="asecod-container">
+                <div class="barre"></div>
+                <p> <span style="font-weight: bold;">ASECOD vous accompagne</span> de la collecte des données au pilotage de vos actions, avec une approche adaptée à votre organisation et à ses enjeux.</p>
+            </div>
+        </section>
+
+        <section class="prestation-section">
+            <h2>NOS PRESTATIONS</h2>
+            <h3>Des solutions pour passer de la mesure à l’action</h3>
+            <p style="color:  #5A5A5A;">Chaque accompagnement est dimensionné selon votre organisation, vos objectifs et les données dont vous disposez.</p>
+
+            <div class="prestation-container">
+                <div class="type-prestation">
+                    <p style="color: #117B96; font-weight: bold;">01</p>
+                    <h4>Bilan carbone/GES</h4>
+                    <p style="color: #5A5A5A;">Évaluer les émissions liées aux activités de votre organisation, identifier les principaux postes d'émission</p>
+                    <div class="link">
+                        <a href="">En savoir plus sur le bilan carbone</a>
+                        <img src="/images/arrow.png" alt="flèche">
+                    </div>
+                    
+                </div>
+                <div class="type-prestation">
+                    <p style="color: #117B96; font-weight: bold;">02</p>
+                    <h4>Stratégie bas carbone et plan de transition</h4>
+                    <p style="color: #5A5A5A;">Construire un plan d'action priorisé selon les émissions, les investissements, les économies potentielles et les contraintes opérationnelles.</p>
+                    <div class="link">
+                        <a href="">Construire mon plan de décarbonation</a>
+                        <img src="/images/arrow.png" alt="flèche">
+                    </div>
+                </div>
+                <div class="type-prestation">
+                    <p style="color: #117B96; font-weight: bold;">03</p>
+                    <h4>Pilotage carbone et tableaux de bord</h4>
+                    <p style="color: #5A5A5A;">Suivre les indicateurs, l'avancement des actions et les résultats, puis préparer les décisions grâce à des données structurées.</p>
+                    <div class="link">
+                        <a href="">En savoir plus sur le bilan carbone</a>
+                        <img src="/images/arrow.png" alt="flèche">
+                    </div>
+                </div>
+                <div class="type-prestation">
+                    <p style="color: #117B96; font-weight: bold;">04</p>
+                    <h4>Économie circulaire et organisation durable</h4>
+                    <p style="color: #5A5A5A;">Examiner les flux de matières, les ressources et les processus pour rechercher des améliorations environnementales et organisationnelles.</p>
+                    <div class="link">
+                        <a href="">Découvrir notre approche systémique</a>
+                        <img src="/images/arrow.png" alt="flèche">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="deroulement-section">
+            <h2>Le déroulement</h2>
+            <h3>UNE MISSION CLAIRE, DE LA DONNÉE À LA DÉCISION</h3>
+            <p style="color: #5A5A5A;">Vous savez dès le départ quelles étapes seront menées, quelles données seront mobilisées et comment les résultats seront transformés en décisions.</p>
+
+            <div class="step-container">
+                <div class="step-item">
+                    <p class="number">1</p>
+                    <h4>Cadrage de la mission</h4>
+                    <p style="color: #5A5A5A;">Comprendre l'activité, les sites concernés, les objectifs, la période de référence et les données disponibles.</p>
+                </div>
+                <div class="step-item">
+                    <p class="number">2</p>
+                    <h4>Collecte des données</h4>
+                    <p style="color: #5A5A5A;">Organiser les demandes aux bons interlocuteurs et rassembler les données d'activité pertinentes.</p>
+                </div>
+                <div class="step-item">
+                    <p class="number">3</p>
+                    <h4>Calcul et contrôle</h4>
+                    <p style="color: #5A5A5A;">Consolider les données, documenter les hypothèses et facteurs d'émission utilisés, et traiter les incertitudes pertinentes.</p>
+                </div>
+                <div class="step-item">
+                    <p class="number">4</p>
+                    <h4>Analyse et plan d'action</h4>
+                    <p style="color: #5A5A5A;">Identifier les principaux postes et comparer les possibilités de réduction adaptées à l'organisation</p>
+                </div>
+                <div class="step-item">
+                    <p class="number">5</p>
+                    <h4>Restitution et suivi</h4>
+                    <p style="color: #5A5A5A;">Présenter les conclusions, formaliser les actions et définir les indicateurs de suivi utiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="adn-section" id="adn-section">
+            <h2 style="font-size: 24px; color: #f5f5f5;">NOTRE ADN</h2>
+            <p>L’essence d’ASECOD est inscrite dans son nom : Approche Systémique en Économie Circulaire et Organisation Durable. Nous relions les enjeux climatiques aux réalités opérationnelles pour produire des analyses compréhensibles, des priorités partagées et des actions que votre organisation peut réellement piloter.</p>
+        </section>
+
+        <section class="approche-section" id="approche-section">
+            <h2>Notre approche</h2>
+            <h3>La méthode ASECOD</h3>
+            <p>Notre expertise repose sur trois piliers complémentaires qui structurent l’analyse, les recommandations et le suivi.</p>
+            <p style="color: #117B96; font-weight: bold;">Comprendre l’ensemble pour agir là où l’impact est le plus fort.</p>
+
+            <div class="approche-container">
+                <div class="cart">
+                    <div>
+                        <p style="color: #117B96;">01</p>
+                        <img src="/images/approche.svg" alt="image d'engrenage" class="img">
+                    </div>
+                    <p style="color: #117B96; font-weight: bold;">Pilier 1</p>
+                    <h4>Approche systémique</h4>
+                    <p style="color: #5A5A5A;">Nous relions les données carbone aux activités, aux ressources et aux contraintes de votre organisation afin de hiérarchiser les leviers pertinents.</p>
+                </div>
+                <div class="cart">
+                    <div>
+                        <p style="color: #117B96;">02</p>
+                        <img src="/images/economie.svg" alt="image d'économie circulaire" class="img">
+                    </div>
+                    <p style="color: #117B96; font-weight: bold;">Pilier 2</p>
+                    <h4>Economie circulaire</h4>
+                    <p style="color: #5A5A5A;">Nous examinons les flux de matières et les usages pour réduire les pertes, mieux utiliser les ressources et faire émerger des solutions réalistes.</p>
+                </div>
+                <div class="cart">
+                    <div>
+                        <p style="color: #117B96;">03</p>
+                        <img src="/images/organisation.svg" alt="image d'engrenage" class="img">
+                    </div>
+                    <p style="color: #117B96; font-weight: bold;">Pilier 3</p>
+                    <h4>Organisation durable</h4>
+                    <p style="color: #5A5A5A;">Nous intégrons les objectifs carbone aux décisions, aux responsabilités et aux indicateurs pour inscrire les actions dans la durée.</p>
+                </div>
+            </div>
+
+            <div class="approche-quest">
+                <p>
+                    Une lecture globale de votre organisation, traduite en priorités explicites, en responsabilités et en indicateurs de suivi.
+                </p>
+                <div>
+                    <a href="#contact-section" style="color: #f5f5f5; font-weight: bold;">Échanger sur votre projet</a>
+                    <img src="/images/arrow-quest.svg" alt="flèche">
+                </div>
+            </div>
+        </section>
+
+        <section class="ressource-section" id="ressource">
+            <div class="ressource-container">
+                <h2>Ressources</h2>
+                <h3 style="color: #1B1F20;">Comprendre les enjeux pour mieux agir</h3>
+                <p>Guides pratiques, repères méthodologiques et retours d’expérience pour préparer et piloter votre transition bas carbone.</p>
+            </div>
+            <a href="#contact-section">Recevoir des ressources adaptées</a>
+        </section>
+
+        <section id="faq">
+            <h2>Questions fréquentes</h2>
+            <h3>Vos questions sur le bilan carbone et notre accompagnement</h3>
+            <p style="color: #5A5A5A;">Retrouvez les réponses aux questions les plus courantes pour préparer votre démarche et comprendre notre accompagnement.</p>
+
+            <div class="faq-container" id="faqContainer"></div>
+
+            <div class="faq-next">
+                <div class="faq">
+                    <h4>Vous avez d’autres questions sur votre démarche carbone ?</h4>
+                    <p>Chaque organisation a ses propres enjeux et contraintes. Contactez ASECOD pour échanger sur votre situation et identifier l’accompagnement le plus adapté à vos besoins.</p>
+                </div>
+                    <a href="#contact-section">Demander un premier échange</a>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact-section">
+            <div>
+                <h2>Premier échange</h2>
+                <h3 style="color:#1B1F20">Demander un diagnostic</h3>
+                <p style="color: #5A5A5A;">Parlez-nous brièvement de votre besoin. Nous vous recontactons pour un échange sans engagement.</p>
+                <p style="color: #117B96;">Formulaire en moins de 2 minutes · Sans engagement</p>
+            </div>
+
+            <form action="" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nom et prénom</label>
+                        <input type="text" id="name" placeholder="Votre nom et prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail professionnel</label>
+                        <input type="email" id="email" placeholder="vous@entreprise.fr" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Organisation</label>
+                    <input type="text" id="organization" placeholder="Nom de votre organisation">
+                </div>
+
+                <div class="form-group">
+                    <label for="need">Votre besoin principal</label>
+                    <select id="need" required>
+                        <option value="" disabled selected>Sélectionnez un besoin</option>
+                        <option value="bilan-carbone">Bilan carbone/GES</option>
+                        <option value="strategie">Stratégie bas carbone</option>
+                        <option value="pilotage">Pilotage carbone et tableaux de bord</option>
+                        <option value="economie">Économie circulaire et organisation durable</option>
+                        <option value="ressources">Ressources et accompagnement à définir</option>
+                        <option value="conseil">Je souhaite être conseillé.e</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Envoyer ma demande →
+                </button>
+
+                <p class="form-footer" style="color: #5A5A5A; font-size: 16px;">Vos informations sont uniquement utilisées pour répondre à votre demande.</p>
+            </form>
         </section>
     </main>
-
-    <div id="contact"></div>
-
+    
+    <div id="contact"></div> 
 </body>
 </html>
