@@ -33,12 +33,15 @@ h2, h3{
 }
 
 h2{
-    font-size: var(--font-body);
+    font-size: var(--body-size);
 }
 
 h3{
     font-size: var(--title-size);
-    font-family: var(--font-title);
+}
+
+.dropdown-toggle{
+    font-family: var(--font-body);
 }
 
 .first-container{
@@ -208,6 +211,7 @@ h3{
 h4{
     font-size: 22px;
     margin-bottom: 10px;
+    font-family: var(--font-title);
 }
 
 .link{
@@ -654,16 +658,16 @@ h4{
     body,
     .text,
     .form-footer{
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
 
     h3,
     .adn-section h2{
-        font-size: 20px !important;
+        font-size: 22px !important;
     }
 
     h4{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .approche-quest{

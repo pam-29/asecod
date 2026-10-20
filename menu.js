@@ -1,13 +1,12 @@
 fetch('/helpers/footer.html')
     .then(res => res.text())
     .then(html => {
-        const contactEl = document.getElementById('contact');
+        const contactEl = document.getElementById('contact-section');
         if (contactEl) {
             contactEl.innerHTML = html;
         }
     })
     .catch(err => console.error('Erreur lors du chargement du footer :', err));
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
@@ -46,4 +45,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+
+
+// -------------- Formulaire de contact ------------------
+document.addEventListener('submit', async function(e) {
+    if (e.target && e.target.id === 'contact-form') {
+        e.preventDefault(); 
+
+        const contactForm = e.target;
+        const formData = new FormData(contactForm);
+
+        formData.append("access_key", "aa6ee34f-9c54-4152-b6e4-f673ec2f4d35");
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                alert('Merci ! Votre demande a bien été envoyée.');
+                contactForm.reset(); 
+            } else {
+                alert('Une erreur est survenue, veuillez réessayer.');
+            }
+        } catch (error) {
+            console.error('Erreur :', error);
+            alert('Impossible d’envoyer le formulaire pour le moment.');
+        }
+    }
 });

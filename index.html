@@ -34,12 +34,12 @@
         <ul class="menu-list">
             <li><a href="">Accueil</a></li>
             <li class="has-dropdown">
-                <button class="dropdown-toggle" aria-expanded="false">
+                <button class="dropdown-toggle" aria-expanded="false"">
                     Prestations <span class="arrow">▾</span>
                 </button>
                 <ul class="sub-menu">
                     <li>
-                        <a href="">
+                        <a href="/pages/bilan.html">
                             <strong>Bilan carbone et bilan GES</strong>
                             <span>Mesurer précisément vos émissions</span>
                         </a>
@@ -71,7 +71,7 @@
         </ul>
 
         <div class="menu-footer">
-            <a href="#contact-section" class="btn-diagnostic">Demander un diagnostic</a>
+            <a href="#contact" class="btn-diagnostic">Demander un diagnostic</a>
         </div>
     </nav>
 
@@ -125,16 +125,15 @@
             <h3>Des solutions pour passer de la mesure à l’action</h3>
             <p style="color:  #5A5A5A;">Chaque accompagnement est dimensionné selon votre organisation, vos objectifs et les données dont vous disposez.</p>
 
-            <div class="prestation-container">
+            <div class="prestation-container" id="prestation">
                 <div class="type-prestation">
                     <p style="color: #117B96; font-weight: bold;">01</p>
                     <h4>Bilan carbone/GES</h4>
                     <p style="color: #5A5A5A;">Évaluer les émissions liées aux activités de votre organisation, identifier les principaux postes d'émission</p>
                     <div class="link">
-                        <a href="">En savoir plus sur le bilan carbone</a>
+                        <a href="/pages/bilan.html">En savoir plus sur le bilan carbone</a>
                         <img src="/images/arrow.png" alt="flèche">
-                    </div>
-                    
+                    </div> 
                 </div>
                 <div class="type-prestation">
                     <p style="color: #117B96; font-weight: bold;">02</p>
@@ -246,7 +245,7 @@
                     Une lecture globale de votre organisation, traduite en priorités explicites, en responsabilités et en indicateurs de suivi.
                 </p>
                 <div>
-                    <a href="#contact-section" style="color: #f5f5f5; font-weight: bold;">Échanger sur votre projet</a>
+                    <a href="#contact" style="color: #f5f5f5; font-weight: bold;">Échanger sur votre projet</a>
                     <img src="/images/arrow-quest.svg" alt="flèche">
                 </div>
             </div>
@@ -258,7 +257,7 @@
                 <h3 style="color: #1B1F20;">Comprendre les enjeux pour mieux agir</h3>
                 <p>Guides pratiques, repères méthodologiques et retours d’expérience pour préparer et piloter votre transition bas carbone.</p>
             </div>
-            <a href="#contact-section">Recevoir des ressources adaptées</a>
+            <a href="#contact">Recevoir des ressources adaptées</a>
         </section>
 
         <section id="faq">
@@ -273,11 +272,11 @@
                     <h4>Vous avez d’autres questions sur votre démarche carbone ?</h4>
                     <p>Chaque organisation a ses propres enjeux et contraintes. Contactez ASECOD pour échanger sur votre situation et identifier l’accompagnement le plus adapté à vos besoins.</p>
                 </div>
-                    <a href="#contact-section">Demander un premier échange</a>
+                    <a href="#contact">Demander un premier échange</a>
             </div>
         </section>
 
-        <section class="contact-section" id="contact-section">
+        <section class="contact-section" id="contact">
             <div>
                 <h2>Premier échange</h2>
                 <h3 style="color:#1B1F20">Demander un diagnostic</h3>
@@ -285,26 +284,28 @@
                 <p style="color: #117B96;">Formulaire en moins de 2 minutes · Sans engagement</p>
             </div>
 
-            <form action="" class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+                <input type="hidden" name="access_key" value="aa6ee34f-9c54-4152-b6e4-f673ec2f4d35">
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Nom et prénom</label>
-                        <input type="text" id="name" placeholder="Votre nom et prénom" required>
+                        <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail professionnel</label>
-                        <input type="email" id="email" placeholder="vous@entreprise.fr" required>
+                        <input type="email" id="email" name="email" placeholder="vous@entreprise.fr" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="organization">Organisation</label>
-                    <input type="text" id="organization" placeholder="Nom de votre organisation">
+                    <input type="text" id="organization" name="organization" placeholder="Nom de votre organisation">
                 </div>
 
                 <div class="form-group">
                     <label for="need">Votre besoin principal</label>
-                    <select id="need" required>
+                    <select id="need" name="need" required>
                         <option value="" disabled selected>Sélectionnez un besoin</option>
                         <option value="bilan-carbone">Bilan carbone/GES</option>
                         <option value="strategie">Stratégie bas carbone</option>
@@ -324,6 +325,6 @@
         </section>
     </main>
     
-    <div id="contact"></div> 
+    <div id="contact-section"></div> 
 </body>
 </html>

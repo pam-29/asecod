@@ -42,7 +42,7 @@ const faqData = [
     },
     {
         number: "08",
-        question: "PEst-il possible de suivre les émissions et les progrès dans le temps ?",
+        question: "Est-il possible de suivre les émissions et les progrès dans le temps ?",
         answer: "Oui. Un suivi régulier permet de comparer les résultats, d’observer l’évolution des principaux postes d’émission et de suivre l’avancement des actions engagées.<br><br>Selon vos besoins, ce suivi peut s’appuyer sur des indicateurs, des rapports périodiques ou un tableau de bord adapté à votre organisation. Les méthodes de calcul et les périmètres doivent rester cohérents pour que les comparaisons soient pertinentes."
     },
 ];

@@ -1,0 +1,224 @@
+:root{
+    --primary-color: #f5f5f5;
+    --secondary-color: #117B96;
+    --accent-color: #8FE2F1;
+    --text-color: #1B1F20;
+    --title-size: 26px;
+    --body-size: 18px;
+    --font-title: 'manrope', sans-serif;
+    --font-body: 'inter', sans-serif;
+}
+
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+    width: 100vw;
+    color: var(--text-color);
+    font-size: var(--body-size);
+    font-family: "inter", sans-serif;
+}
+
+section{
+    padding: 100px;
+}
+
+.bilan-section{
+    background: #117B96;
+    background: linear-gradient(151deg, rgba(17, 123, 150, 1) 18%, rgba(143, 226, 241, 1) 84%); 
+    height: auto;
+    color: var(--primary-color);
+    padding-top: 50px;
+}
+
+.bilan-section p:first-child{
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-family: "manrope", sans-serif;
+}
+
+.bilan-section h1{
+    font-size: 50px;
+    font-family: "manrope", sans-serif;
+    margin-top: 0;
+}
+
+.bilan-section div{
+    margin-top: 80px;
+}
+
+.bilan-section div div{ 
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.bilan-section div a:first-child{
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bilan-section div a:last-child{
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 2px;
+}   
+
+h2{
+    font-size: var(--body-size);
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+h3{
+    font-size: var(--title-size);
+    font-family: var(--font-title);
+}
+
+h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: var(--font-title);
+}
+
+.accompagnement-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.accompagnement-container div{
+    border: solid rgba(143, 226, 241, 0.4) 1px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.mission-section{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECF3F5;
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    margin-bottom: 16px;
+    color: #5A5A5A;
+}
+
+.check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #117B96; 
+    color: #f5f5f5; 
+    border-radius: 50%; 
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.echange-section h2{
+    color: #8FE2F1;
+}
+
+.echange-section{
+    background-color: #117B96;
+    border-radius: 20px;
+    color: var(--primary-color);
+    padding: 20px;
+    margin: 100px 0;
+
+}
+
+.echange-section div:last-child{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.echange-section a{
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 2px;
+    font-weight: bold;
+}
+
+.echange-section a:hover,
+.back:hover{
+    opacity: 80%;
+}
+
+.back{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 2px;
+}
+
+.back img{
+    rotate: -180deg;
+}
+
+
+@media screen and (max-width: 900px) {
+    section{
+        padding: 30px 50px;
+    }
+    .bilan-section h1{
+        font-size: 26px;
+    }
+
+    .bilan-section p{
+        width: auto !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section{
+        padding: 30px 20px;
+    }
+
+    .accompagnement-container{
+        grid-template-columns: 1fr;
+    }
+
+    .mission-section{
+        flex-direction: column;
+    }
+
+    .bilan-section div div{
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h3{
+        font-size: 22px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+}
