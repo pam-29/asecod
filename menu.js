@@ -55,9 +55,12 @@ document.addEventListener('submit', async function(e) {
         e.preventDefault(); 
 
         const contactForm = e.target;
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
         const formData = new FormData(contactForm);
 
-        formData.append("access_key", "aa6ee34f-9c54-4152-b6e4-f673ec2f4d35");
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = "Envoi en cours...";
+        submitBtn.disabled = true;
 
         try {
             const response = await fetch('https://api.web3forms.com/submit', {
@@ -67,15 +70,18 @@ document.addEventListener('submit', async function(e) {
 
             const data = await response.json();
 
-            if (data.success) {
+            if (response.ok) {
                 alert('Merci ! Votre demande a bien été envoyée.');
                 contactForm.reset(); 
             } else {
-                alert('Une erreur est survenue, veuillez réessayer.');
+                alert('Erreur : ' + (data.message || 'Une erreur est survenue.'));
             }
         } catch (error) {
             console.error('Erreur :', error);
             alert('Impossible d’envoyer le formulaire pour le moment.');
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
         }
     }
 });
